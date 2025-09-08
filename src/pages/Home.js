@@ -1,51 +1,50 @@
 import React from "react";
 import logo from "../assets/carbid-logo-white.png"; 
-import banner from "../assets/banner-carbid2.png";
-import "./Home.css"
+import "./Home.css";
 
 function Home() {
   const destacados = [
-    { id: 1, marca: "Ferrari", modelo: "488 Spider", año: 2021, precio: 250000 },
-    { id: 2, marca: "Toyota", modelo: "Corolla", año: 2020, precio: 12000 },
-    { id: 3, marca: "Tesla", modelo: "Model 3", año: 2022, precio: 35000 }
+    {
+      id: 1,
+      marca: "Toyota",
+      modelo: "Corolla",
+      precio: 12000,
+      imagen: "https://guatemala-carrocarros.s3.amazonaws.com/uploads/picture/url/58055/big_with_watermark_toyota-corolla-guatemala-guatemala-6839.jpg"
+    },
+    {
+      id: 2,
+      marca: "Honda",
+      modelo: "Civic",
+      precio: 14000,
+      imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/2015_Honda_Civic_Si_Coupe_Orange.JPG/1280px-2015_Honda_Civic_Si_Coupe_Orange.JPG"
+    },
+    {
+      id: 3,
+      marca: "Nissan",
+      modelo: "GTR",
+      precio: 35000,
+      imagen: "https://cdn.prod.website-files.com/5b4a3b3971d099f78f362505/6552d819f23f3d69c6657e83_683.webp"
+    }
   ];
 
   return (
     <div>
-      {/* Hero Section */}
-      <header
-        className="text-white text-center d-flex flex-column justify-content-center align-items-center"
-        style={{
-          backgroundImage: `url(${banner})`, // 👈 usamos tu banner
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "480px",
-          position: "relative"
-        }}
-      >
-        {/* Overlay oscuro opcional (para contraste) */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.5)"
-          }}
-        ></div>
+      {/* Barra roja superior */}
+      <div className="barra-roja d-flex justify-content-end align-items-center px-4">
+        <a href="/login" className="btn-login">
+          Login
+        </a>
+      </div>
 
-        {/* Contenido */}
-        <div style={{ position: "relative" }}>
-            <img
-            src={logo}
-            alt="CarBid Logo"
-            style={{ width: "300px", marginTop: "-160px"}}
-          />
-            <p className="oleo-script-bold">
-                Tu próximo auto, al mejor precio y en el mejor lugar.
-            </p>
-          <a href="/login" className="btn btn-danger btn-lg mt-3 shadow">
+      {/* Hero Section */}
+      <header className="hero-section text-center">
+        <div className="overlay"></div>
+        <div className="hero-content">
+          <img src={logo} alt="CarBid Logo" className="hero-logo" />
+          <p className="hero-text oleo-script-bold">
+            Tu próximo auto, al mejor precio y en el mejor lugar.
+          </p>
+          <a href="/subastas" className="btn-explorar">
             Explorar Subastas
           </a>
         </div>
@@ -57,20 +56,20 @@ function Home() {
         <div className="row">
           {destacados.map((carro) => (
             <div key={carro.id} className="col-md-4">
-              <div className="card mb-4 shadow-lg border-0">
-                <img
-                  src={`https://via.placeholder.com/400x200?text=${carro.marca}+${carro.modelo}`}
-                  className="card-img-top"
-                  alt={`${carro.marca} ${carro.modelo}`}
+              <div className="card-carro shadow-lg">
+                <img 
+                  src={carro.imagen} 
+                  alt={`${carro.marca} ${carro.modelo}`} 
+                  className="card-carro-img"
                 />
                 <div className="card-body text-center">
                   <h5 className="card-title">
-                    {carro.marca} {carro.modelo} ({carro.año})
+                    {carro.marca} {carro.modelo}
                   </h5>
-                  <p className="card-text text-muted">
-                    💰 Desde ${carro.precio.toLocaleString()}
+                  <p className="card-text precio">
+                    ${carro.precio.toLocaleString()}
                   </p>
-                  <a href="/detalle" className="btn btn-outline-dark">
+                  <a href="/detalle" className="btn-ver">
                     Ver Subasta
                   </a>
                 </div>
@@ -80,33 +79,12 @@ function Home() {
         </div>
       </div>
 
-      {/* Beneficios */}
-      <div className="bg-dark text-white py-5">
-        <div className="container text-center">
-          <h3 className="mb-4">¿Por qué elegir CarBid?</h3>
-          <div className="row">
-            <div className="col-md-4">
-              <h1>🔒</h1>
-              <p className="lead">Subastas seguras y transparentes</p>
-            </div>
-            <div className="col-md-4">
-              <h1>⚡</h1>
-              <p className="lead">Pujas en tiempo real desde cualquier lugar</p>
-            </div>
-            <div className="col-md-4">
-              <h1>🌎</h1>
-              <p className="lead">Accesible en todo el mundo</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <footer className="bg-light text-center py-3">
-        <p className="mb-0">
+      {/* Barra roja inferior */}
+      <div className="barra-roja">
+        <p className="footer-text">
           © {new Date().getFullYear()} CarBid. Todos los derechos reservados.
         </p>
-      </footer>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Oleo+Script:wght@400;700&display=swap');/*estilo de Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Fugaz+One&family=Michroma&family=Oleo+Script&display=swap');
 
 .oleo-script-regular {
   font-family: "Fugaz One", sans-serif;
@@ -16,3 +16,129 @@
   font-size: 2.2rem;
   line-height: 1.4; 
 }
+
+/* Barra roja superior e inferior */
+.barra-roja {
+  background: #F52D29;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.btn-login {
+  background: #fff;
+  color: #F52D29;
+  padding: 5px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background: #f1f1f1;
+  color: #F52D29;
+}
+
+/* Hero section */
+.hero-section {
+  background-image: url("../assets/banner-carbid2.png");
+  background-size: cover;
+  background-position: center;
+  height: 480px;
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-logo {
+  width: 300px;
+  margin-top: -100px;
+}
+
+.hero-text {
+  font-size: 200%;
+  margin-top: -60px;
+}
+
+.btn-explorar {
+  display: inline-block;
+  background: #F52D29;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-explorar:hover {
+  background: #c5303d;
+}
+
+/* Carros destacados */
+.card-carro {
+  border: none;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: "Michroma", sans-serif;
+}
+
+.card-carro-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.precio {
+  color: #555;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.btn-ver {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+  background: #F52D29;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.btn-ver:hover {
+  background: #c5303d;
+  color: #fff;
+}
+
+.footer-text {
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;        /* asegura que ocupe todo el ancho */
+  display: block;     /* se asegura de comportarse como bloque */
+}
+
+
