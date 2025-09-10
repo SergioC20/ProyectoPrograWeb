@@ -25,8 +25,8 @@ export default function DetalleSubasta({
   // Puedes pasar un deadline como prop (Date, string, o timestamp).
   // Por defecto, 45 minutos desde que se carga la página.
   deadline = Date.now() + 45 * 60 * 1000,
-  brand = "Marca: Toyota",
-  model = "Modelo: Corolla",
+  brand = "Toyota",
+  model = "Corolla",
 }) {
   const target = useMemo(() => new Date(deadline).getTime(), [deadline]);
   const [now, setNow] = useState(Date.now());
@@ -55,7 +55,7 @@ export default function DetalleSubasta({
               </div>
 
               <div className="text-center mt-4">
-                <h2 className="price-title mb-2">Precio: $12,000</h2>
+                <h2 className="price-title mb-2">$12,000</h2>
                 <h5 className="mb-1 fw-semibold">Tiempo restante</h5>
                 <div
                   className={`countdown ${finished ? "countdown-finished" : ""}`}
@@ -96,17 +96,17 @@ export default function DetalleSubasta({
                     <tbody>
                       <tr>
                         <td>Persona 1</td>
-                        <td>Q1,000</td>
+                        <td>$1,000</td>
                         <td>Hace 8 min</td>
                       </tr>
                       <tr>
                         <td>Persona 2</td>
-                        <td>Q2,000</td>
+                        <td>$2,000</td>
                         <td>Hace 18 min</td>
                       </tr>
                       <tr>
                         <td>Persona 3</td>
-                        <td>Q3,000</td>
+                        <td>$3,000</td>
                         <td>Hace 28 min</td>
                       </tr>
                     </tbody>
@@ -120,13 +120,13 @@ export default function DetalleSubasta({
         {/* Fila inferior: cajas + botón */}
         <div className="row g-3 mt-4 mt-lg-5 align-items-stretch">
           <div className="col-12 col-md-4 col-lg-3">
-            <div className="info-box text-center">Precio base: Q1000</div>
+            <div className="info-box text-center">Precio base: $1000</div>
           </div>
           <div className="col-12 col-md-4 col-lg-3">
-            <div className="info-box text-center">Puja más alta: Q3000</div>
+            <div className="info-box text-center">Puja más alta: $3000</div>
           </div>
           <div className="col-12 col-md-4 col-lg-3">
-            <div className="info-box info-box-wide text-center">Q4,000</div>
+            <div className="info-box info-box-wide text-center">$4,000</div>
           </div>
           <div className="col-12 col-lg-3 d-grid">
             <button type="button" className="btn btn-bid btn-lg">

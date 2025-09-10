@@ -1,14 +1,20 @@
 import React from "react";
+import logo from "../assets/carbid-logo-dark.png"; 
+import "./Login.css";
 
 function Login() {
   return (
-    <div className="container d-flex justify-content-center align-items-center vh-100">
-      <div className="card p-4 shadow" style={{ width: "400px" }}>
-        <h2 className="text-center mb-4">🚗 CarBid - Login</h2>
-        
+    <div className="login-container">
+      {/* Logo */}
+      <img src={logo} alt="CarBid Logo" className="login-logo" />
+
+      {/* Caja roja (Bootstrap card con override de CSS) */}
+      <div className="card login-box shadow">
+        <h2 className="text-center mb-4">Login</h2>
+
         <div className="mb-3">
-          <label className="form-label">Correo electrónico</label>
-          <input type="email" className="form-control" placeholder="Ingresa tu correo" />
+          <label className="form-label">Usuario</label>
+          <input type="text" className="form-control" placeholder="Ingresa tu usuario" />
         </div>
 
         <div className="mb-3">
@@ -16,11 +22,10 @@ function Login() {
           <input type="password" className="form-control" placeholder="Ingresa tu contraseña" />
         </div>
 
-        <button className="btn btn-primary w-100 mb-3">Iniciar Sesión</button>
+        <button className="btn btn-light w-100 mb-3">Ingresar</button>
 
         <p className="text-center">
-          ¿No tienes cuenta?{" "}
-          <a href="#" className="text-decoration-none">Regístrate aquí</a>
+          <a href="#" className="text-decoration-none text-white">Crear una cuenta</a>
         </p>
       </div>
     </div>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Fugaz+One&family=Michroma&family=Oleo+Script&display=swap');
+
 /* Reset suave y fondo claro */
 .auction-page {
   min-height: 100vh;
@@ -9,7 +11,7 @@
 /* Franjas rojas superior e inferior */
 .band {
   width: 100%;
-  height: 36px;
+  height: 80px;
   background: #e3322b; /* rojo vivo */
 }
 .band-top { /* nada extra */ }
@@ -50,11 +52,13 @@
   font-size: clamp(2rem, 5.2vw, 3.5rem);
   line-height: 1.05;
   margin-bottom: .25rem;
+  font-family: "Michroma", sans-serif;
 }
 .model-title {
   font-weight: 800;
   font-size: clamp(1.3rem, 2.8vw, 2rem);
   margin: 0;
+  font-family: "Michroma", sans-serif;
 }
 
 /* Listas/labels */
@@ -84,6 +88,8 @@
 .price-title {
   font-weight: 800;
   font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+  font-family: "Bungee", sans-serif;
+  color: #0E931E;
 }
 
 /* Countdown */
@@ -95,6 +101,7 @@
 }
 .countdown-finished {
   color: #aa0000;
+  
 }
 
 /* Caja inferior gris */
